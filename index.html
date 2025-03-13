@@ -3,92 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robert Mwatua | Portfolio</title>
+    <title>Robert Mwatua - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
 </head>
 <body>
-    <header>
+    <!-- Navigation -->
+        <!-- Navigation -->
         <nav>
-            <div class="logo">Robert Mwatua</div>
+            <div class="logo">
+                <span class="tooltip" data-tooltip="Hi, I'm Robert Mwatua!">Robert Mwatua</span>
+            </div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
+            </div>
         </nav>
+        
+        <!-- Hero Section -->
         <section class="hero">
-            <h1>Hi, I'm Robert Mwatua</h1>
-            <p>Software Engineer | Web Developer | Cybersecurity Enthusiast</p>
-            <a href="#projects" class="btn">View My Work</a>
+            <div class="profile-pic">
+                <img src="https://github.com/Robertmwatua/portifolio./blob/main/Snapchat-159492411.jpg?raw=true" alt="Robert Mwatua">
+            </div>
+            <h1>Welcome to My Portfolio</h1>
+            <p>Showcasing my work, skills, and passion.</p>
+            <a href="#projects" class="btn">View Projects</a>
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <span>Scroll Down</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
         </section>
-    </header>
 
+    <!-- About Section -->
     <section id="about" class="section">
         <h2>About Me</h2>
-        <p>I'm a passionate software engineer and web developer, keen on solving real-world problems through technology.</p>
-        <div class="about-content">
-            <img src="profile.jpg" alt="Robert Mwatua" class="profile-pic">
-            <p>With expertise in web development, cybersecurity, and ethical hacking, I create innovative solutions to modern challenges.</p>
-        </div>
+        <p class="about-text">
+            <b>Hi, I'm Robert Mwatua, a passionate developer and tech enthusiast. I specialize in creating responsive and user-friendly web applications. With a strong foundation in programming and design, I strive to deliver high-quality solutions that meet user needs. When I'm not coding, I enjoy exploring new technologies and contributing to open-source projects.</b>
+        </p>
     </section>
 
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-        <div class="project-container">
-            <div class="project-card">
-                <img src="project1.jpg" alt="Project 1">
-                <h3>Food Delivery System</h3>
-                <p>A desktop app for food delivery using HTML, CSS, and JavaScript.</p>
-            </div>
-            <div class="project-card">
-                <img src="project2.jpg" alt="Project 2">
-                <h3>Matatu & Tourism Website</h3>
-                <p>A website to improve public transport and tourism in Kenya.</p>
-            </div>
-            <div class="project-card">
-                <img src="project3.jpg" alt="Project 3">
-                <h3>Cybersecurity Dashboard</h3>
-                <p>A real-time dashboard to monitor and analyze security threats.</p>
-            </div>
-        </div>
-    </section>
-
+           <!-- Skills Section -->
     <section id="skills" class="section">
-        <h2>Skills</h2>
-        <ul class="skills-list">
-            <li>Web Development</li>
-            <li>Cybersecurity</li>
-            <li>Python & Ethical Hacking</li>
-            <li>Software Engineering</li>
-            <li>JavaScript & React</li>
-            <li>Database Management</li>
-            <li>Networking & System Security</li>
-        </ul>
-    </section>
-
-    <section id="contact" class="section">
-        <h2>Contact Me</h2>
-        <p>Email: robert@example.com</p>
-        <p>GitHub: github.com/robertmwatua</p>
-        <p>LinkedIn: linkedin.com/in/robertmwatua</p>
-        <form action="#" method="post" class="contact-form">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Robert Mwatua. All Rights Reserved.</p>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <div class="circular-progress" data-progress="95">
+                    <span class="progress-value">95%</span>
+                </div>
+                <h3>Web Development</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="skill">
+                <div class="circular-progress" data-progress="80">
+                    <span class="progress-value">80%</span>
+                </div>
+                <h3>UI/UX Design</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="skill">
+                <div class="circular-progress" data-progress="90">
+                    <span class="progress-value">90%</span>
+                </div>
+                <h3>JavaScript</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="skill">
+                <div class="circular-progress" data-progress="85">
+                    <span class="progress-value">85%</span>
+                </div>
+                <h3>React.js</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
         </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <h2>Image Gallery</h2>
+        <div class="image-gallery">
+            <img src="https://github.com/Robertmwatua/portifolio./blob/main/IT4.jpg?raw=true" alt="Gallery Image 1">
+            <img src="https://github.com/Robertmwatua/portifolio./blob/main/IT5.jpg?raw=true" alt="Gallery Image 2">
+            <img src="https://github.com/Robertmwatua/portifolio./blob/main/bonkers_image_an_image_with.jpeg?raw=true" alt="Gallery Image 3">
+            <img src="https://github.com/Robertmwatua/portifolio./blob/main/bonkers_image_generate_a_picture.jpeg?raw=true" alt="Gallery Image 4">
+            <img src="https://github.com/Robertmwatua/portifolio./blob/main/bonkers_image_an_image_with%20(1).jpeg?raw=true" alt="Gallery Image 5">
+            <img src="https://github.com/Robertmwatua/portifolio./blob/main/IT.jpg?raw=true" alt="Gallery Image 6">
+        </div>
+    </section>
+
+    <!-- Back to Top Arrow -->
+    <div class="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="mailto:favourmwatua@gmail.com" class="tooltip" data-tooltip="Email Me">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.instagram.com/_.robert.o" target="_blank" class="tooltip" data-tooltip="Follow on Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/254714080296" target="_blank" class="tooltip" data-tooltip="Chat on WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://github.com/Robertmwatua" target="_blank" class="tooltip" data-tooltip="View on GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <p>&copy; 2025 Robert Mwatua. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        // Toggle Theme Function
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle("light-mode");
+            const themeIcon = document.querySelector(".theme-toggle i");
+            if (body.classList.contains("light-mode")) {
+                themeIcon.classList.replace("fa-moon", "fa-sun");
+            } else {
+                themeIcon.classList.replace("fa-sun", "fa-moon");
+            }
+        }
+                // Tooltip Functionality for Logo
+                const logoTooltip = document.querySelector(".logo .tooltip");
+        logoTooltip.addEventListener("mouseover", () => {
+            const tooltipText = logoTooltip.getAttribute("data-tooltip");
+            const tooltipElement = document.createElement("div");
+            tooltipElement.className = "tooltip-text";
+            tooltipElement.innerText = tooltipText;
+            logoTooltip.appendChild(tooltipElement);
+        });
+        logoTooltip.addEventListener("mouseout", () => {
+            const tooltipElement = logoTooltip.querySelector(".tooltip-text");
+            if (tooltipElement) {
+                logoTooltip.removeChild(tooltipElement);
+            }
+        });
+
+        // Scroll to Top Function
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+                // Circular Progress Bar Animation
+                const circularProgressBars = document.querySelectorAll(".circular-progress");
+        circularProgressBars.forEach(progressBar => {
+            const progressValue = progressBar.querySelector(".progress-value");
+            const progress = progressBar.getAttribute("data-progress");
+            progressBar.style.background = `conic-gradient(#ffcc00 ${progress}%, rgba(255, 255, 255, 0.2) ${progress}%)`;
+            progressValue.textContent = `${progress}%`;
+        });
+
+        // Tooltip Functionality
+        const tooltips = document.querySelectorAll(".tooltip");
+        tooltips.forEach(tooltip => {
+            tooltip.addEventListener("mouseover", () => {
+                const tooltipText = tooltip.getAttribute("data-tooltip");
+                const tooltipElement = document.createElement("div");
+                tooltipElement.className = "tooltip-text";
+                tooltipElement.innerText = tooltipText;
+                tooltip.appendChild(tooltipElement);
+            });
+            tooltip.addEventListener("mouseout", () => {
+                const tooltipElement = tooltip.querySelector(".tooltip-text");
+                if (tooltipElement) {
+                    tooltip.removeChild(tooltipElement);
+                }
+            });
+        });
+    </script>
 </body>
 </html>
