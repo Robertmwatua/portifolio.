@@ -5,25 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robert Mwatua - Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Custom Cursor -->
-    <div class="cursor"></div>
-
-    <!-- Particle.js Background -->
-    <div id="particles-js"></div>
-
-    <!-- Navigation with Hamburger Menu -->
+    <!-- Navigation -->
     <nav>
         <div class="logo">
             <span class="tooltip" data-tooltip="Hi, I'm Robert Mwatua!">Robert Mwatua</span>
         </div>
-        <div class="hamburger" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i>
-        </div>
-        <ul class="nav-links" id="navLinks">
+        <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#gallery">Gallery</a></li>
@@ -114,18 +104,16 @@
         </div>
     </section>
 
-    <!-- Gallery Section with Horizontal Scroll -->
+    <!-- Gallery Section -->
     <section id="gallery" class="section">
         <h2>Image Gallery</h2>
-        <div class="horizontal-gallery">
-            <div class="gallery-container">
-                <img src="https://github.com/Robertmwatua/portifolio./blob/main/IT4.jpg?raw=true" alt="Gallery Image 1">
-                <img src="https://github.com/Robertmwatua/portifolio./blob/main/IT5.jpg?raw=true" alt="Gallery Image 2">
-                <img src="https://github.com/Robertmwatua/portifolio./blob/main/bonkers_image_an_image_with.jpeg?raw=true" alt="Gallery Image 3">
-                <img src="https://github.com/Robertmwatua/portifolio./blob/main/bonkers_image_generate_a_picture.jpeg?raw=true" alt="Gallery Image 4">
-                <img src="https://github.com/Robertmwatua/portifolio./blob/main/bonkers_image_an_image_with%20(1).jpeg?raw=true" alt="Gallery Image 5">
-                <img src="https://github.com/Robertmwatua/portifolio./blob/main/IT.jpg?raw=true" alt="Gallery Image 6">
-            </div>
+        <div class="image-gallery">
+            <img src="https://github.com/Robertmwatua/portifolio./blob/main/IT4.jpg?raw=true" alt="Gallery Image 1">
+            <img src="https://github.com/Robertmwatua/portifolio./blob/main/IT5.jpg?raw=true" alt="Gallery Image 2">
+            <img src="https://github.com/Robertmwatua/portifolio./blob/main/bonkers_image_an_image_with.jpeg?raw=true" alt="Gallery Image 3">
+            <img src="https://github.com/Robertmwatua/portifolio./blob/main/bonkers_image_generate_a_picture.jpeg?raw=true" alt="Gallery Image 4">
+            <img src="https://github.com/Robertmwatua/portifolio./blob/main/bonkers_image_an_image_with%20(1).jpeg?raw=true" alt="Gallery Image 5">
+            <img src="https://github.com/Robertmwatua/portifolio./blob/main/IT.jpg?raw=true" alt="Gallery Image 6">
         </div>
     </section>
 
@@ -177,8 +165,6 @@
         <p>&copy; 2025 Robert Mwatua. All Rights Reserved.</p>
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
         // JavaScript for theme toggle, tooltips, etc.
         function toggleTheme() {
@@ -190,12 +176,6 @@
             } else {
                 themeIcon.classList.replace("fa-sun", "fa-moon");
             }
-        }
-
-        // Hamburger Menu Toggle
-        function toggleMenu() {
-            const navLinks = document.getElementById("navLinks");
-            navLinks.classList.toggle("active");
         }
 
         // Circular Progress Bar Animation
@@ -233,11 +213,6 @@
                     behavior: 'smooth'
                 });
             });
-        });
-
-        // Particle.js Background
-        particlesJS.load('particles-js', 'particles.json', function() {
-            console.log('Particles.js loaded!');
         });
     </script>
 </body>
