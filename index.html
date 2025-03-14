@@ -5,50 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robert Mwatua - Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-        <!-- Navigation -->
-        <nav>
-            <div class="logo">
-                <span class="tooltip" data-tooltip="Hi, I'm Robert Mwatua!">Robert Mwatua</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="theme-toggle" onclick="toggleTheme()">
-                <i class="fas fa-moon"></i>
-            </div>
-        </nav>
-        
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="profile-pic">
-                <img src="https://github.com/Robertmwatua/portifolio./blob/main/Snapchat-159492411.jpg?raw=true" alt="Robert Mwatua">
-            </div>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+
+    <!-- Particle.js Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation with Hamburger Menu -->
+    <nav>
+        <div class="logo">
+            <span class="tooltip" data-tooltip="Hi, I'm Robert Mwatua!">Robert Mwatua</span>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="theme-toggle" onclick="toggleTheme()">
+            <i class="fas fa-moon"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="profile-pic">
+            <img src="https://github.com/Robertmwatua/portifolio./blob/main/Snapchat-159492411.jpg?raw=true" alt="Robert Mwatua">
+        </div>
+        <div class="hero-content">
             <h1>Welcome to My Portfolio</h1>
-            <p>Showcasing my work, skills, and passion.</p>
+            <p class="tagline">Crafting digital experiences that inspire and innovate.</p>
             <a href="#projects" class="btn">View Projects</a>
-            <!-- Scroll Indicator -->
-            <div class="scroll-indicator">
-                <span>Scroll Down</span>
-                <i class="fas fa-chevron-down"></i>
-            </div>
-        </section>
+            <a href="resume.pdf" download class="btn btn-outline">Download Resume</a>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
 
     <!-- About Section -->
     <section id="about" class="section">
         <h2>About Me</h2>
         <p class="about-text">
-            <b>Hi, I'm Robert Mwatua, a passionate developer and tech enthusiast. I specialize in creating responsive and user-friendly web applications. With a strong foundation in programming and design, I strive to deliver high-quality solutions that meet user needs. When I'm not coding, I enjoy exploring new technologies and contributing to open-source projects.</b>
+            Hi, I'm Robert Mwatua, a passionate developer and tech enthusiast. I specialize in creating responsive and user-friendly web applications. With a strong foundation in programming and design, I strive to deliver high-quality solutions that meet user needs. When I'm not coding, I enjoy exploring new technologies and contributing to open-source projects.
         </p>
     </section>
 
-           <!-- Skills Section -->
+    <!-- Skills Section -->
     <section id="skills" class="section">
         <h2>My Skills</h2>
         <div class="skills-container">
@@ -57,49 +69,94 @@
                     <span class="progress-value">95%</span>
                 </div>
                 <h3>Web Development</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Building responsive and dynamic websites.</p>
             </div>
             <div class="skill">
                 <div class="circular-progress" data-progress="80">
                     <span class="progress-value">80%</span>
                 </div>
                 <h3>UI/UX Design</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Designing intuitive and user-friendly interfaces.</p>
             </div>
             <div class="skill">
                 <div class="circular-progress" data-progress="90">
                     <span class="progress-value">90%</span>
                 </div>
                 <h3>JavaScript</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Creating interactive and dynamic web experiences.</p>
             </div>
             <div class="skill">
                 <div class="circular-progress" data-progress="85">
                     <span class="progress-value">85%</span>
                 </div>
                 <h3>React.js</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Developing modern and scalable web applications.</p>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="section">
-        <h2>Image Gallery</h2>
-        <div class="image-gallery">
-            <img src="https://github.com/Robertmwatua/portifolio./blob/main/IT4.jpg?raw=true" alt="Gallery Image 1">
-            <img src="https://github.com/Robertmwatua/portifolio./blob/main/IT5.jpg?raw=true" alt="Gallery Image 2">
-            <img src="https://github.com/Robertmwatua/portifolio./blob/main/bonkers_image_an_image_with.jpeg?raw=true" alt="Gallery Image 3">
-            <img src="https://github.com/Robertmwatua/portifolio./blob/main/bonkers_image_generate_a_picture.jpeg?raw=true" alt="Gallery Image 4">
-            <img src="https://github.com/Robertmwatua/portifolio./blob/main/bonkers_image_an_image_with%20(1).jpeg?raw=true" alt="Gallery Image 5">
-            <img src="https://github.com/Robertmwatua/portifolio./blob/main/IT.jpg?raw=true" alt="Gallery Image 6">
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section">
+        <h2>Testimonials</h2>
+        <div class="testimonials-container">
+            <div class="testimonial">
+                <p>"Robert is an exceptional developer with a keen eye for detail. His work is always top-notch!"</p>
+                <span>- Client A</span>
+            </div>
+            <div class="testimonial">
+                <p>"Working with Robert was a pleasure. He delivered beyond our expectations."</p>
+                <span>- Client B</span>
+            </div>
+            <div class="testimonial">
+                <p>"Robert's creativity and technical skills are unmatched. Highly recommended!"</p>
+                <span>- Client C</span>
+            </div>
         </div>
     </section>
 
-    <!-- Back to Top Arrow -->
-    <div class="back-to-top" onclick="scrollToTop()">
-        <i class="fas fa-arrow-up"></i>
-    </div>
+    <!-- Gallery Section with Horizontal Scroll -->
+    <section id="gallery" class="section">
+        <h2>Image Gallery</h2>
+        <div class="horizontal-gallery">
+            <div class="gallery-container">
+                <img src="https://github.com/Robertmwatua/portifolio./blob/main/IT4.jpg?raw=true" alt="Gallery Image 1">
+                <img src="https://github.com/Robertmwatua/portifolio./blob/main/IT5.jpg?raw=true" alt="Gallery Image 2">
+                <img src="https://github.com/Robertmwatua/portifolio./blob/main/bonkers_image_an_image_with.jpeg?raw=true" alt="Gallery Image 3">
+                <img src="https://github.com/Robertmwatua/portifolio./blob/main/bonkers_image_generate_a_picture.jpeg?raw=true" alt="Gallery Image 4">
+                <img src="https://github.com/Robertmwatua/portifolio./blob/main/bonkers_image_an_image_with%20(1).jpeg?raw=true" alt="Gallery Image 5">
+                <img src="https://github.com/Robertmwatua/portifolio./blob/main/IT.jpg?raw=true" alt="Gallery Image 6">
+            </div>
+        </div>
+    </section>
+
+    <!-- Fun Facts Section -->
+    <section id="fun-facts" class="section">
+        <h2>Fun Facts</h2>
+        <div class="facts-container">
+            <div class="fact">
+                <span class="fact-number">100+</span>
+                <p>Cups of coffee consumed while coding</p>
+            </div>
+            <div class="fact">
+                <span class="fact-number">50+</span>
+                <p>Projects completed</p>
+            </div>
+            <div class="fact">
+                <span class="fact-number">10+</span>
+                <p>Countries visited</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <p>Let's connect and create something amazing together!</p>
+        <div class="contact-links">
+            <a href="mailto:favourmwatua@gmail.com" class="btn">Email Me</a>
+            <a href="https://wa.me/254714080296" target="_blank" class="btn">Chat on WhatsApp</a>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -120,8 +177,10 @@
         <p>&copy; 2025 Robert Mwatua. All Rights Reserved.</p>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
-        // Toggle Theme Function
+        // JavaScript for theme toggle, tooltips, etc.
         function toggleTheme() {
             const body = document.body;
             body.classList.toggle("light-mode");
@@ -132,28 +191,15 @@
                 themeIcon.classList.replace("fa-sun", "fa-moon");
             }
         }
-                // Tooltip Functionality for Logo
-                const logoTooltip = document.querySelector(".logo .tooltip");
-        logoTooltip.addEventListener("mouseover", () => {
-            const tooltipText = logoTooltip.getAttribute("data-tooltip");
-            const tooltipElement = document.createElement("div");
-            tooltipElement.className = "tooltip-text";
-            tooltipElement.innerText = tooltipText;
-            logoTooltip.appendChild(tooltipElement);
-        });
-        logoTooltip.addEventListener("mouseout", () => {
-            const tooltipElement = logoTooltip.querySelector(".tooltip-text");
-            if (tooltipElement) {
-                logoTooltip.removeChild(tooltipElement);
-            }
-        });
 
-        // Scroll to Top Function
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: "smooth" });
+        // Hamburger Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById("navLinks");
+            navLinks.classList.toggle("active");
         }
-                // Circular Progress Bar Animation
-                const circularProgressBars = document.querySelectorAll(".circular-progress");
+
+        // Circular Progress Bar Animation
+        const circularProgressBars = document.querySelectorAll(".circular-progress");
         circularProgressBars.forEach(progressBar => {
             const progressValue = progressBar.querySelector(".progress-value");
             const progress = progressBar.getAttribute("data-progress");
@@ -177,6 +223,21 @@
                     tooltip.removeChild(tooltipElement);
                 }
             });
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Particle.js Background
+        particlesJS.load('particles-js', 'particles.json', function() {
+            console.log('Particles.js loaded!');
         });
     </script>
 </body>
