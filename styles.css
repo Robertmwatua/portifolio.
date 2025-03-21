@@ -144,7 +144,7 @@ body.light-mode {
     left: 50%;
     transform: translateX(-50%);
     font-size: 14px;
-    color: #ff0000;
+    color: #000000;
     animation: bounce 2s infinite;
 }
 
@@ -338,9 +338,10 @@ footer {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-    /* Floating Navigation */
+    /* Floating Navigation Menu */
     .floating-nav {
         right: 10px;
+        gap: 10px;
     }
 
     .floating-nav .nav-icon {
@@ -349,68 +350,17 @@ footer {
         font-size: 18px;
     }
 
-    /* Hero Section */
-    .hero {
-        flex-direction: column;
-        padding: 40px 5%;
-        height: auto;
+    .floating-nav .nav-icon[data-tooltip]::after {
+        right: 50px; /* Adjust tooltip position */
     }
 
-    .hero .profile-pic {
-        width: 120px;
-        height: 120px;
-        margin-bottom: 20px;
-    }
-
-    .hero-content h1 {
-        font-size: 28px;
-    }
-
-    .hero-content .tagline {
-        font-size: 16px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .btn {
-        width: 100%;
-    }
-
+    /* Scroll Down Button */
     .scroll-indicator {
-        bottom: 10px;
+        bottom: 20px; /* Adjust position */
+        font-size: 12px; /* Smaller font size */
     }
 
-    /* Sections */
-    .section {
-        padding: 40px 5%;
-    }
-
-    .section h2 {
-        font-size: 28px;
-    }
-
-    /* Skills Section */
-    .skills-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .skill {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    /* Gallery Section */
-    .image-gallery {
-        grid-template-columns: 1fr;
-    }
-
-    /* Contact Section */
-    .contact-links {
-        flex-direction: column;
-        gap: 10px;
+    .scroll-indicator i {
+        font-size: 16px; /* Adjust icon size */
     }
 }
