@@ -9,38 +9,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">
-            <span class="tooltip" data-tooltip="Hi, I'm Robert Mwatua!">Robert Mwatua</span>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="theme-toggle" onclick="toggleTheme()">
-            <i class="fas fa-moon"></i>
-        </div>
-    </nav>
+    <!-- Premium Floating Navigation Menu -->
+    <div class="floating-nav">
+        <a href="#home" class="nav-icon" data-tooltip="Home">
+            <i class="fas fa-home"></i>
+        </a>
+        <a href="#about" class="nav-icon" data-tooltip="About">
+            <i class="fas fa-user"></i>
+        </a>
+        <a href="#projects" class="nav-icon" data-tooltip="Projects">
+            <i class="fas fa-folder"></i>
+        </a>
+        <a href="#gallery" class="nav-icon" data-tooltip="Gallery">
+            <i class="fas fa-images"></i>
+        </a>
+        <a href="#contact" class="nav-icon" data-tooltip="Contact">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
 
     <!-- Hero Section -->
-<!-- Hero Section -->
-<section class="hero">
-    <div class="profile-pic">
-        <img src="https://github.com/Robertmwatua/portifolio./blob/main/Snapchat-159492411.jpg?raw=true" alt="Robert Mwatua">
-    </div>
-    <div class="hero-content">
-        <h1>Welcome to My Portfolio</h1>
-        <p class="tagline">Crafting digital experiences that inspire and innovate.</p>
-        <a href="#projects" class="btn">View Projects</a>
-        <a href="docs/resume.pdf" download class="btn btn-outline">Download Resume</a>
-
-       
-</section>
-
+    <section class="hero" id="home">
+        <div class="profile-pic">
+            <img src="https://github.com/Robertmwatua/portifolio./blob/main/Snapchat-159492411.jpg?raw=true" alt="Robert Mwatua">
+        </div>
+        <div class="hero-content">
+            <h1>Welcome to My Portfolio</h1>
+            <p class="tagline">Crafting digital experiences that inspire and innovate.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="docs/resume.pdf" download class="btn btn-secondary">Download Resume</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
 
     <!-- About Section -->
     <section id="about" class="section">
@@ -85,25 +90,6 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="section">
-        <h2>Testimonials</h2>
-        <div class="testimonials-container">
-            <div class="testimonial">
-                <p>"Robert is an exceptional developer with a keen eye for detail. His work is always top-notch!"</p>
-                <span>- Client A</span>
-            </div>
-            <div class="testimonial">
-                <p>"Working with Robert was a pleasure. He delivered beyond our expectations."</p>
-                <span>- Client B</span>
-            </div>
-            <div class="testimonial">
-                <p>"Robert's creativity and technical skills are unmatched. Highly recommended!"</p>
-                <span>- Client C</span>
-            </div>
-        </div>
-    </section>
-
     <!-- Gallery Section -->
     <section id="gallery" class="section">
         <h2>Image Gallery</h2>
@@ -117,63 +103,15 @@
         </div>
     </section>
 
-    <!-- Fun Facts Section -->
-    <section id="fun-facts" class="section">
-        <h2>Fun Facts</h2>
-        <div class="facts-container">
-            <div class="fact">
-                <span class="fact-number">100+</span>
-                <p>Cups of coffee consumed while coding</p>
-            </div>
-            <div class="fact">
-                <span class="fact-number">50+</span>
-                <p>Projects completed</p>
-            </div>
-            <div class="fact">
-                <span class="fact-number">10+</span>
-                <p>Countries visited</p>
-            </div>
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <p>Let's connect and create something amazing together!</p>
+        <div class="contact-links">
+            <a href="mailto:favourmwatua@gmail.com" class="btn btn-primary">Email Me</a>
+            <a href="https://wa.me/254714080296" target="_blank" class="btn btn-secondary">Chat on WhatsApp</a>
         </div>
     </section>
-
-    <!-- Contact Section -->
-    <!-- Contact Section -->
-<section id="contact" class="section">
-    <h2>Contact Me</h2>
-    <p>Let's connect and create something amazing together!</p>
-    <div class="contact-links">
-        <a href="mailto:favourmwatua@gmail.com" class="btn">Email Me</a>
-        <a href="https://wa.me/254714080296" target="_blank" class="btn">Chat on WhatsApp</a>
-    </div>
-
-</section>
-    <!-- Comment Section -->
-<section id="comments" class="section">
-    <h2>Leave a Comment</h2>
-    <p>I'd love to hear your thoughts! Please leave a comment below.</p>
-    <form class="comment-form">
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-        </div>
-        <div class="form-group">
-            <label for="comment">Comment</label>
-            <textarea id="comment" name="comment" placeholder="Write your comment here..." rows="5" required></textarea>
-        </div>
-        <button type="submit" class="btn">Submit Comment</button>
-    </form>
-</section>
- <!-- Fund the Future - M-Pesa Button -->
- <a href="#" class="btn" id="fund-btn">Fund the Future - M-Pesa</a>
-</div>
-<div class="scroll-indicator">
-    <span>Scroll Down</span>
-    <i class="fas fa-chevron-down"></i>
-</div>
 
     <!-- Footer -->
     <footer>
@@ -193,11 +131,8 @@
         </div>
         <p>&copy; 2025 Robert Mwatua. All Rights Reserved.</p>
     </footer>
-    
 
     <!-- Link to External JavaScript File -->
     <script src="scripts.js"></script>
-    
-</div>
 </body>
 </html>
