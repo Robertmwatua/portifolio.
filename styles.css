@@ -144,7 +144,7 @@ body.light-mode {
     left: 50%;
     transform: translateX(-50%);
     font-size: 14px;
-    color: #fff;
+    color: #000000;
     animation: bounce 2s infinite;
 }
 
