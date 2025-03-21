@@ -13,50 +13,54 @@ body.light-mode {
     color: #333;
 }
 
-/* Navigation */
-nav {
+/* Premium Floating Navigation Menu */
+.floating-nav {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10%;
-    background-color: #333;
-    color: #fff;
-    position: sticky;
-    top: 0;
+    flex-direction: column;
+    gap: 15px;
     z-index: 1000;
 }
 
-nav .logo {
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-nav .nav-links {
-    list-style: none;
+.floating-nav .nav-icon {
+    background-color: #ffcc00;
+    color: #333;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     display: flex;
-    gap: 20px;
-}
-
-nav .nav-links a {
-    color: #fff;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-nav .nav-links a:hover {
-    color: #ffcc00;
-}
-
-nav .theme-toggle {
-    cursor: pointer;
     font-size: 20px;
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-nav .theme-toggle:hover {
+.floating-nav .nav-icon:hover {
+    background-color: #e6b800;
     transform: scale(1.1);
+}
+
+.floating-nav .nav-icon[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    right: 60px;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.floating-nav .nav-icon:hover::after {
+    opacity: 1;
 }
 
 /* Hero Section */
@@ -64,17 +68,17 @@ nav .theme-toggle:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 60px 10%; /* Reduced padding */
-    background-image: url('https://github.com/Robertmwatua/portifolio./blob/main/IT.jpg?raw=true'); /* Add your background image URL here */
+    padding: 60px 10%;
+    background-image: url('https://github.com/Robertmwatua/portifolio./blob/main/IT.jpg?raw=true');
     background-size: cover;
     background-position: center;
     color: #fff;
     text-align: center;
-    height: 70vh; /* Reduced height */
+    height: 70vh;
 }
 
 .hero .profile-pic {
-    width: 150px; /* Slightly smaller profile picture */
+    width: 150px;
     height: 150px;
     border-radius: 50%;
     overflow: hidden;
@@ -84,86 +88,59 @@ nav .theme-toggle:hover {
 .hero .profile-pic img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the circular area */
+    object-fit: cover;
 }
 
 .hero-content h1 {
-    font-size: 36px; /* Slightly smaller heading */
+    font-size: 36px;
     margin-bottom: 15px;
 }
 
 .hero-content .tagline {
-    font-size: 18px; /* Slightly smaller tagline */
+    font-size: 18px;
     margin-bottom: 20px;
 }
 
-.hero-content .btn {
-    padding: 8px 16px; /* Smaller buttons */
-    font-size: 14px;
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
 }
 
-.scroll-indicator {
-    position: absolute;
-    bottom: 10px; /* Adjusted position */
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 14px;
-    color: #fff;
-    animation: bounce 2s infinite;
+.btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
 }
 
-.hero .profile-pic {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 5px solid #ffcc00;
-}
-
-.hero .profile-pic img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the image covers the circular area */
-}
-
-.hero-content h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.hero-content .tagline {
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-.hero-content .btn {
-    padding: 10px 20px;
+.btn-primary {
     background-color: #ffcc00;
     color: #333;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-right: 10px;
-    transition: background-color 0.3s ease;
 }
 
-.hero-content .btn-outline {
+.btn-primary:hover {
+    background-color: #e6b800;
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
     background-color: transparent;
     border: 2px solid #ffcc00;
     color: #ffcc00;
 }
 
-.hero-content .btn:hover {
-    background-color: #e6b800;
-}
-
-.hero-content .btn-outline:hover {
+.btn-secondary:hover {
     background-color: #ffcc00;
     color: #333;
+    transform: translateY(-3px);
 }
 
 .scroll-indicator {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 14px;
@@ -242,33 +219,6 @@ nav .theme-toggle:hover {
     color: #666;
 }
 
-/* Testimonials Section */
-.testimonials-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.testimonial {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-    text-align: left;
-}
-
-.testimonial p {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.testimonial span {
-    font-size: 14px;
-    color: #666;
-}
-
 /* Gallery Section */
 .image-gallery {
     display: grid;
@@ -287,34 +237,6 @@ nav .theme-toggle:hover {
     transform: scale(1.05);
 }
 
-/* Fun Facts Section */
-.facts-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.fact {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 200px;
-    text-align: center;
-}
-
-.fact-number {
-    font-size: 36px;
-    font-weight: bold;
-    color: #ffcc00;
-}
-
-.fact p {
-    font-size: 16px;
-    color: #666;
-}
-
 /* Contact Section */
 .contact-links {
     display: flex;
@@ -324,16 +246,33 @@ nav .theme-toggle:hover {
 }
 
 .contact-links .btn {
-    padding: 10px 20px;
-    background-color: #ffcc00;
-    color: #333;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 50px;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.contact-links .btn:hover {
+.contact-links .btn-primary {
+    background-color: #ffcc00;
+    color: #333;
+}
+
+.contact-links .btn-primary:hover {
     background-color: #e6b800;
+    transform: translateY(-3px);
+}
+
+.contact-links .btn-secondary {
+    background-color: transparent;
+    border: 2px solid #ffcc00;
+    color: #ffcc00;
+}
+
+.contact-links .btn-secondary:hover {
+    background-color: #ffcc00;
+    color: #333;
+    transform: translateY(-3px);
 }
 
 /* Footer */
@@ -384,6 +323,7 @@ footer {
 .tooltip:hover .tooltip-text {
     opacity: 1;
 }
+
 /* Fade-In Animation for Sections */
 .section {
     opacity: 0;
@@ -395,146 +335,18 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
-/* Comment Section */
-#comments {
-    background-color: #f9f9f9;
-    padding: 60px 10%;
-}
 
-.comment-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: #333;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: border-color 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: #ffcc00;
-    outline: none;
-}
-
-.form-group textarea {
-    resize: vertical;
-}
-
-.comment-form .btn {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    background-color: #ffcc00;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.comment-form .btn:hover {
-    background-color: #e6b800;
-}
-/* General Styles */
-body {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-}
-
-.hero-content h1 {
-    font-size: 36px;
-    margin-bottom: 15px;
-}
-
-.hero-content .tagline {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.section h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-}
-
-.skill h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.testimonial p {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.fact-number {
-    font-size: 36px;
-    font-weight: bold;
-    color: #ffcc00;
-}
-
-.fact p {
-    font-size: 16px;
-    color: #666;
-}
-/* Floating Donate Button */
-.floating-donate {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-}
-
-.floating-donate .btn {
-    background-color: #f5f8f6; /* Green color for donation */
-    padding: 12px 24px;
-    font-size: 16px;
-    border-radius: 50px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.floating-donate .btn:hover {
-    background-color: #070707; /* Darker green on hover */
-}
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-    /* Navigation */
-    nav {
-        padding: 10px 5%;
+    /* Floating Navigation */
+    .floating-nav {
+        right: 10px;
     }
 
-    nav .nav-links {
-        flex-direction: column;
-        gap: 10px;
+    .floating-nav .nav-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
     }
 
     /* Hero Section */
@@ -558,9 +370,13 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 16px;
     }
 
-    .hero-content .btn {
-        font-size: 14px;
-        padding: 8px 16px;
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
     }
 
     .scroll-indicator {
@@ -587,31 +403,9 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: 20px;
     }
 
-    /* Testimonials Section */
-    .testimonials-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .testimonial {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
     /* Gallery Section */
     .image-gallery {
         grid-template-columns: 1fr;
-    }
-
-    /* Fun Facts Section */
-    .facts-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .fact {
-        width: 100%;
-        margin-bottom: 20px;
     }
 
     /* Contact Section */
@@ -619,54 +413,4 @@ h1, h2, h3, h4, h5, h6 {
         flex-direction: column;
         gap: 10px;
     }
-
-    /* Floating Donate Button */
-    .floating-donate {
-        bottom: 10px;
-        right: 10px;
-    }
-
-    .floating-donate .btn {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
-}
-/* Floating Fund the Future - M-Pesa Button */
-.floating-fund-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-}
-
-#fund-btn {
-    background-color: #28a745; /* Green color for support */
-    color: #fff;
-    font-weight: bold;
-    padding: 12px 24px;
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    animation: bounce 2s infinite; /* Continuous bouncing animation */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Bouncing Animation */
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
-    }
-}
-
-/* Hover Effect */
-#fund-btn:hover {
-    background-color: #218838; /* Darker green on hover */
 }
